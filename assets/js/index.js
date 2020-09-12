@@ -2,7 +2,7 @@ $(function() {
     getname();
     var layer = layui.layer;
     $('#btn_out').on("click", function() {
-        console.log("ok");
+        // console.log("ok");
         layer.confirm('确定退出？', { icon: 3, title: '提示' }, function(index) {
             //do something
             localStorage.removeItem("token");
@@ -42,6 +42,6 @@ function getuserimg(res) {
     } else {
         $(".layui-nav-img").attr("src", res.user_pic).show()
         $(".text-avater").hide();
-
+        $("#weclome").html("欢迎&nbsp;&nbsp;" + name)
     }
 }
